@@ -11,7 +11,7 @@
 ////example of call by value
 #include <iostream>
 using namespace std;
-void changeValue(int x) {
+void changeValue(int x){
     x = 50;  // This can't changes the original variable
 }
 int main() {
