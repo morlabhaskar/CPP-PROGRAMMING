@@ -12,11 +12,19 @@ int *Input(int *p,int s){
     return p;
 }
 void Reverse(int *p,int s){
-    int temp;
-    for(int i=0,j=s-1;i<j;i++,j--){
-        temp=p[i];
-        p[i]=p[j];
-        p[j]=temp;
+    // int temp;
+    // for(int i=0,j=s-1;i<j;i++,j--){
+    //     temp=p[i];
+    //     p[i]=p[j];
+    //     p[j]=temp;
+    // }
+    int *left=p,*right=p+(s-1);
+    while(left<right){
+        int temp=*left;
+        *left=*right;
+        *right=temp;
+        left++;
+        right--;
     }
 }
 void Print(int *p,int s){

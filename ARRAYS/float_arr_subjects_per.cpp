@@ -9,11 +9,11 @@ float *Input(float *p,int sub){
     return p;
 }
 float Percentage(float *p,int sub){
-    float tot=0;
+    float total=0;
     for(int i=0;i<sub;i++){
-        tot += p[i];
+        total += p[i];
     }
-    return (sub/tot)*100;
+    return (sub/total)*100;
 }
 void Print(float *p,int sub,float per){
     cout<<"Subjects are :"<<endl;
