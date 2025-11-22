@@ -12,17 +12,18 @@ bool is_vowel(char ch){
     return false;
 }
 int main(){
-    string str;
+    // string str;
+    char *str=new char[100];
     cout<<"Enter a String :"<<endl;
-    getline(cin,str);
+    cin.getline(str,100);
     cout<<"String is : "<<str<<endl;
-    int i;
-    for(i=0;i<str.length();){
+    int i=0;
+    while(str[i]!='\0'){
         if(is_vowel(str[i])){
             memset(&str[i],'*',1);
-        }else{
-            i++;
         }
+        i++;
     }
-    cout<<"String is : "<<str;
+    cout<<"String is : "<<str<<endl;
+    delete[] str;
 }
