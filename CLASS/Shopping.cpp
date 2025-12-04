@@ -27,7 +27,9 @@ class Shopping{
                 cout<<"Cart is Empty!"<<endl;
                 return;
             }
+            cout<<"-------------------------------------------"<<endl;
             cout<<"Items in Cart : "<<endl;
+            cout<<"-------------------------------------------"<<endl;
             for(int i=0;i<items;i++){
                 cout<<i+1<<" . Name : "<<cart[i].name<<" | Qty : "<<cart[i].Qty<<" | Price : $"<<cart[i].price*cart[i].Qty<<endl;
                 cout<<endl;
@@ -59,10 +61,12 @@ class Shopping{
 
 int main(){
     Shopping shop;
-    PRODUCT p1={"Soap",50,75};
-    PRODUCT p2={"apple",30,20};
+    PRODUCT p1={"Soap",50,5};
+    PRODUCT p2={"apple",30,6};
+    PRODUCT p3={"banana",20,8};
     shop.AddToCart(p1);
     shop.AddToCart(p2);
+    shop.AddToCart(p3);
     shop.ViewCart();
     shop.CalTotalAmount();
     shop.DeleteItem(1);
