@@ -53,7 +53,6 @@ class Stack{
                         break;
                     case 'q':
                         return;
-                        
                 }
             }
         }
