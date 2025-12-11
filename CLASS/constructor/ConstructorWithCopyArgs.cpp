@@ -4,11 +4,9 @@ using namespace std;
 class ABC{
     int data1,data2;
     public:
-        ABC(){
-            cout<<"Enter Data1 : "<<endl;
-            cin>>data1;
-            cout<<"Enter Data2 : "<<endl;
-            cin>>data2;
+        ABC(ABC &a){
+            data1 = a.data1;
+            data2 = a.data2;
         }
         void Print(){
             cout<<"Data-1 : "<<data1<<endl;
@@ -17,6 +15,6 @@ class ABC{
 };
 
 int main(){
-    ABC obj;
+    ABC obj(obj);
     obj.Print();
 }
