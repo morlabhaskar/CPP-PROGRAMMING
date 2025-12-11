@@ -101,8 +101,8 @@ This repository includes:
 
 ## Tools & Requirements
 
-- **Compiler:** GCC / Clang / MSVC / ARM GCC  
-- **Editor/IDE:** VS Code, CLion, Keil uVision (optional for embedded C++)  
+- **Compiler:** GCC / MSVC / ARM GCC  
+- **Editor/IDE:** VS Code, Keil uVision (optional for embedded C++)  
 - **OS:** Windows / Linux  
 - **C++ Standard:** C++17 or later  
 - **Optional Tools:**  
