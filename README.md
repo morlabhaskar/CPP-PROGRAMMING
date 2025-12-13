@@ -101,13 +101,12 @@ This repository includes:
 
 ## Tools & Requirements
 
-- **Compiler:** GCC / MSVC / ARM GCC  
+- **Compiler:** GCC  
 - **Editor/IDE:** VS Code, Keil uVision (optional for embedded C++)  
-- **OS:** Windows / Linux  
+- **OS:** Windows
 - **C++ Standard:** C++17 or later  
 - **Optional Tools:**  
   - GDB debugger  
-  - Valgrind (memory debugging)  
   - QEMU, Proteus, or any MCU IDE for embedded development  
 
 ---
