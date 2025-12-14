@@ -8,7 +8,7 @@ Faculty :: Faculty(){
     cout<<"Enter the experience : "<<endl;
     cin>>exp;
 }
-Faculty :: Print(){
+void Faculty :: Print(){
     cout<<"EmpId : "<<empid<<endl;
     cout<<"Name : "<<name<<endl;
     cout<<"Subject : "<<subject<<endl;
@@ -24,10 +24,10 @@ void Faculty :: UpLoadMarks(Student &s){
     s.per = s.totMarks/6;
     if(s.per<40)
 		strcpy(s.grade,"C");
-	else if(s.per>=40 && S.per<50)
+	else if(s.per>=40 && s.per<50)
 		strcpy(s.grade,"B");
 	else if(s.per>=50 && s.per<60)
-		strcpy(S.grade,"B+");
+		strcpy(s.grade,"B+");
 	else if(s.per>=60 && s.per<70)
 		strcpy(s.grade,"A");
 	else 

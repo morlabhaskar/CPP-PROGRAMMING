@@ -7,4 +7,4 @@ class Faculty{
         Faculty();
         void Print();
         void UpLoadMarks(Student &);
-}
+};

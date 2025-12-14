@@ -6,6 +6,7 @@ class Student{
     float per;
     char grade[3];
     public:
+        Student();
         void Print();
-        friend void Falcuty :: UpLoadMarks(Student &);
+        friend void Faculty :: UpLoadMarks(Student &);
 };
