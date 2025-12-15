@@ -20,6 +20,12 @@ Complex Complex :: operator+(Complex e){
     temp.imag = imag + e.imag;
     return temp;
 }
+Complex & Complex :: operator+(int x){
+    static Complex temp;
+    temp.real = real+x;
+    temp.imag = imag;
+    return temp;
+}
 Complex :: ~Complex(){
     cout<<"Destructor "<<endl;
 }

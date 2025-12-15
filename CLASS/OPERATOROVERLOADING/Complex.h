@@ -9,6 +9,7 @@ class Complex{
         void Print();
         ~Complex();//destructor
         Complex operator+(Complex);
+        Complex & operator+(int);
 };
 
 #endif
