@@ -20,8 +20,8 @@ Complex Complex :: operator+(Complex e){
     temp.imag = imag + e.imag;
     return temp;
 }
-Complex Complex :: operator-(Complex e){
-    Complex temp;
+Complex & Complex :: operator-(Complex &e){
+    static Complex temp;
     temp.real = real-e.real;
     temp.imag = imag-e.imag;
     return temp;
@@ -36,6 +36,17 @@ Complex & Complex :: operator-(int x){
     static Complex temp;
     temp.real = real-x;
     temp.imag = imag;
+    return temp;
+}
+Complex & Complex :: operator++(){
+    ++real;
+    ++imag;
+    return *this;
+}
+Complex & Complex :: operator++(int){
+    static Complex temp;
+    temp.real = real++;
+    temp.imag = imag++;
     return temp;
 }
 
