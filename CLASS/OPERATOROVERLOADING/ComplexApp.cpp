@@ -5,14 +5,17 @@ using namespace std;
 #include "Complex.cpp"
 
 int main(){
-    Complex e1(10,20),e2(30,40),e3;
+    Complex e1(10,20),e2(30,40),e3,e4;
     e3 = e1 + e2;  //e3 = e1.operator+(e2);
+    e4 = e2 - e1;  //e4 = e2.operator-(e1);
     cout<<"e1 : "<<endl;
     e1.Print();
     cout<<"e2 : "<<endl;
     e2.Print();
     cout<<"e3 : "<<endl;
     e3.Print();
+    cout<<"e4 : "<<endl;
+    e4.Print();
 }
 
 
