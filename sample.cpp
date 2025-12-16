@@ -117,3 +117,236 @@ using namespace std;
 //     cout<<n3<<",";
 //     cout<<n4<<endl;
 // }// → 30,30  Initialization happens only once, not every function call.
+
+
+// void increment(int &ref) {
+//     ref++;
+// }
+// int main() {
+//     int x = 5;
+//     increment(x);
+//     cout << x << endl;
+//     return 0;
+// }// → 6
+
+
+// void print(int &ref) {
+//     cout << ref << endl;
+// }
+// int main() {
+//     print(5);
+//     return 0;
+// }// → error
+
+
+// int main()
+// {
+// int *arr = new int[4];
+// for(int i=0;i<4;i++)
+//         cin>>*(arr + i);
+// cout << *(arr + 2);
+// delete[] arr;
+// }
+
+
+// int & fun( ){
+//     static int x=10;
+//     return x;
+// }
+// int main(){
+//     fun()=30;
+//     cout<<fun()<<endl;
+// } // → 30
+
+
+// int main(){
+//     bool flag1=true;
+//     cout<<sizeof(flag1)<<endl;
+// }// → 1
+
+
+// int main(){
+//     int x=10,y=20;
+//     int &ref=x;
+//     cout<<ref<<" "<<x<<" ";
+//     ref=y;
+//     cout<<ref<<" "<<x<<endl;
+// } // → 10 10 20 20 
+
+
+// class ABC{     
+//     int data1,data2;
+//     public: 
+//         void setData(int a=0,int b=0){     
+//             data1=a;
+//             data2=b;    
+//         }
+//         void Print(){      
+//             cout<<data1<<","<<data2<<",";
+//         }
+// };
+// int main(){      
+//     ABC obj1,obj2;
+//     obj1.setData(10,20);
+//     obj2.setData();
+//     obj1.Print();
+//     obj2.Print();
+// } // → 10,20,0,0
+
+
+
+// class ABC{     
+//     int data1,data2;
+//     void Inc(){
+//         ++data1;
+//         data2++;
+//     }
+//     public: 
+//         void setData(int a=0,int b=0){     
+//             data1=a;
+//             data2=b;                 
+//             Inc();
+//         }
+//         void Print(){      
+//             cout<<data1<<","<<data2<<",";
+//         }
+// };
+// int main(){      
+//     ABC obj1,obj2;
+//     obj1.setData(10,20);
+//     obj2.setData();
+//     obj1.Print();
+//     obj2.Print();
+// }  // → 11,21,1,1
+
+
+// class ABC{
+//     int data1,data2;
+//     const int data3;
+//     static int x;
+//     public:
+//         ABC() :data3(5){
+//             data1=20;
+//             data2=10;
+//             x++;
+//         }
+// };
+// int ABC::x;
+// int main(){
+//     ABC obj;
+//     cout<<sizeof(obj)<<endl;
+// }//12
+
+
+// int & fun(){
+//     static int x=10;
+//     return x;
+// }
+// int main(){
+//     fun()=30;
+//     cout<<fun()<<endl;
+// }//30
+
+
+// int main(){
+//     bool flag1=true;
+//     cout<<sizeof(flag1)<<endl;
+// }//1
+
+
+// int main(){
+//     int x=10,y=20;
+//     int &ref=x;
+//     cout<<ref<<" "<<x<<" ";
+//     ref=y;
+//     cout<<ref<<" "<<x<<endl;
+// }// 10 10 20 20
+
+
+// class Test {
+//     int x;
+//     public:
+//         Test(int a) : x(a){}
+//         friend void swapValues(Test &t1, Test &t2);
+// };
+// void swapValues(Test &t1, Test &t2) {
+//     int temp = t1.x;
+//     t1.x = t2.x;
+//     t2.x = temp;
+// }
+// int main() {
+//     Test a(5), b(10);
+//     swapValues(a, b);
+//     cout << "a=" << a.x << " b=" << b.x;
+// }//error
+
+
+// class B;
+// class A{ 
+//     private: 
+//         int a; 
+//     public: 
+//         A(){ 
+//             a = 0;
+//         } 
+//         friend class B; // Friend Class 
+// }; 
+// class B{ 
+//     private: 
+//         int b; 
+//     public:
+//         void showA(A& x) {  
+//             std::cout << "A::a=" << x.a; 
+//         }
+// }; 
+// int main() { 
+//     A a; 
+//     B b; 
+//     b.showA(a);   
+// }//A::a=0
+
+
+// class Num {
+//     int val;
+//     public:
+//         Num(int v) : val(v) {}      //Num(int v) {val = v;}
+//         friend Num operator*(Num n1, Num n2);
+//         void print(){ 
+//             cout << val; 
+//         }
+// };
+// Num operator*(Num n1, Num n2) {
+//     return Num(n1.val * n2.val);
+// }
+// int main() {
+//     Num a(3), b(4);
+//     Num c = a * b;
+//     c.print();
+// }//12
+
+
+// class Test {
+//     int x;
+//     public:
+//         Test(int a) : x(a) {}   // Test(int a){x=a;}
+//         friend void change(Test &t);
+// };
+// void change(Test &t){ 
+//     t.x += 5; 
+// }
+// int main() {
+//     Test obj(10);
+//     change(obj);
+//     cout << "Value: " << obj.x;
+// }//error
+
+
+
+
+
+
+
+
+
+
+
