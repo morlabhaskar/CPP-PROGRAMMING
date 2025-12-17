@@ -342,6 +342,55 @@ using namespace std;
 
 
 
+// namespace ABC{
+//     int data=10;
+// }
+// namespace XYZ{
+//     int data=40;
+// }
+// int main(){
+//     int data=100;
+//     cout<<"data:"<<data<<endl;
+// }//data:100
+
+
+// namespace ABC{
+//     int x=10;
+//     void Display(){
+//         cout<<"ABC Display:"<<endl;
+//     }
+// }
+// namespace XYZ{
+//     float x=2.5;
+//     void Display(){
+//         cout<<"XYZ Display:"<<endl;
+//     }
+// }
+// using namespace ABC;
+// int main(){
+//     cout<<x<<endl;
+//     XYZ::Display();
+// }//10\n  XYZ Display:
+
+
+
+// namespace ABC{
+//     int x=10;
+//     void Display(){
+//         cout<<"ABC Display:"<<endl;
+//     }
+// }
+// namespace XYZ{
+//     float x=2.5;
+//     void Display(){
+//         cout<<"XYZ Display:"<<endl;
+//     }
+// }
+// using namespace ABC;
+// int main(){
+//     cout<<x<<endl;
+//     XYZ::Display();
+// }//10\n  XYZ Display:
 
 
 
