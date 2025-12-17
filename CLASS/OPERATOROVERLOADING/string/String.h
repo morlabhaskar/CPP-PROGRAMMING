@@ -7,6 +7,8 @@ class String{
         String(String &);
         bool operator==(String &);
         String & operator+(String &);
+        void operator=(String &);
+        char operator[](int);
         void Print();
         ~String();
 };

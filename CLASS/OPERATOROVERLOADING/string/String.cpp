@@ -20,6 +20,11 @@ bool String :: operator==(String &s){
         return true;
     return false;
 }
+void String :: operator=(String &s){
+    size = s.size;
+    ptr = new char[size];
+    strcpy(ptr,s.ptr);
+}
 String & String :: operator+(String &s){
     static String temp;
     temp.size = size + s.size;
@@ -27,6 +32,11 @@ String & String :: operator+(String &s){
     strcpy(temp.ptr,ptr);
     strcat(temp.ptr,s.ptr);
     return temp;
+}
+char String :: operator[](int index){
+    if((index<0) || (index>=strlen(ptr)))
+        return -1;
+    return ptr[index];
 }
 void String :: Print(){
     cout<<"String : "<<ptr<<" , Size : "<<size<<endl;
