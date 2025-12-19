@@ -393,6 +393,11 @@ using namespace std;
 // }//10\n  XYZ Display:
 
 
+/*
+Inheritance definition
+
+*/
+
 
 
 
