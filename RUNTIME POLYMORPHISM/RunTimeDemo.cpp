@@ -1,3 +1,6 @@
+/*
+A base class pointer pointing to derived class objects invokes overridden virtual functions through runtime polymorphism.
+*/
 #include<iostream>
 using namespace std;
 
