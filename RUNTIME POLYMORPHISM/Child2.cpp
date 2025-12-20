@@ -1,6 +1,6 @@
 class Child2 : public Mother{
     public :
-        Child1(){
+        Child2(){
             cout<<"Child2 Constructor"<<endl;
         }
         void Whomi(){
