@@ -62,7 +62,6 @@ void calculateDeliveryCharges(Package p,Sender &s){
     s.totalCharge = s.weight * s.distance * p.ratePerKgPerKm;
 }
 
-
 int main(){
     Package p;
     Sender s;
@@ -76,3 +75,6 @@ int main(){
 
     s.displayTotalCharge();
 }
+
+
+
