@@ -75,5 +75,4 @@ int main(){
     calculateDeliveryCharges(p,s);
 
     s.displayTotalCharge();
-
 }
