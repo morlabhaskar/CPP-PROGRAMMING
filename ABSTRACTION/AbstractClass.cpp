@@ -32,5 +32,4 @@ int main(){
         ptr->Print();
         delete ptr;
     }
-
 }
