@@ -8,5 +8,9 @@ int main(){
         cout<< x << " ";
     }
 }
-
+/*
+Fixed size (decided at compile time)
+Faster than traditional arrays
+Stored in contiguous memory
+*/
 
