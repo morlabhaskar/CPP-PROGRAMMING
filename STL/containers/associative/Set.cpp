@@ -14,6 +14,7 @@ int main(){
 }
 /*
 Stores unique values only
-Automatically sorted
 No duplicates allowed
+Elements of a set are read-only (const).
+Sorting depends on the value of elements
 */
