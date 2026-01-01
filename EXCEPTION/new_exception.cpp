@@ -16,6 +16,7 @@ int main(){
             }
             cout<<endl;
         }
+        delete[] ptr;
     }
     catch(bad_alloc &a){
         cout<<"Failed"<<endl;

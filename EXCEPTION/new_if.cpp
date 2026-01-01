@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-	int *ptr;
+    int *ptr;
 	ptr=new int[0xffffffff];
 	if(ptr==NULL){
 		cout<<"memory allocation failed:"<<endl;
@@ -15,4 +15,5 @@ int main(){
 		    cout<<ptr[i]<<" ";
 	    cout<<endl;
 	}
+    delete[] ptr;
 }
