@@ -3,7 +3,7 @@
 using namespace std;
 //a.out  sourcefile destfile
 int main(int argc,char *argv[]){
-    int ch;
+    char ch,*buf;
     ifstream src;
     ofstream dest;
     if(argc!=3){
@@ -15,7 +15,12 @@ int main(int argc,char *argv[]){
     
     src.seekg(0,ios::end);
     int size = src.tellg();
-    cout<<"Size : "<<size<<endl;
+    // cout<<"Size : "<<size<<endl;
+    src.seekg(0,ios::beg);
+    buf=new char[size];
+    src.read(buf,size);
+    dest.write(buf,size);
+    delete[] buf;
 
     src.close();
     dest.close();
