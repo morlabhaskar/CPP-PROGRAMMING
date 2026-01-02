@@ -1,7 +1,8 @@
 // #include<iostream>
 #include<fstream>
 using namespace std;
-int main(){
+//a.out  sourcefile   destfile
+int main(int argc,char *argv[]){
     char str[100];
     ifstream src;
     ofstream dest;
