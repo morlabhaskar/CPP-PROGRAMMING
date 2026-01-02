@@ -36,6 +36,8 @@ void operator<<(ostream &out,Employee &e){
 }
 int main(){
     Employee e;
+    // e.Input();
+    // e.Print();
     cin>>e;
     cout<<e;
 }
