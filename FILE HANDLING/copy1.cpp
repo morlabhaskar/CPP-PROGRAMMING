@@ -1,16 +1,19 @@
-// #include<iostream>
+#include<iostream>
 #include<fstream>
 using namespace std;
 //a.out  sourcefile   destfile
 int main(int argc,char *argv[]){
-    char str[100];
+    char ch;
     ifstream src;
     ofstream dest;
-    src.open("source.txt");//open in read mode
-    dest.open("dest.txt");//open in write mode
-    while(!src.eof()){
-        src>>str;
-        dest<<str;
+    if(argc!=3){
+        cout<<"Incorrect Inputs"<<endl;
+        exit(0);
+    }
+    src.open(argv[1]);
+    dest.open(argv[2]);
+    while((ch=src.get())!=EOF){
+        dest.put(ch);
     }
     src.close();
     dest.close();
