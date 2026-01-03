@@ -7,13 +7,13 @@ class Complex{
         Complex(int=0,int=0);//parameterised cons
         Complex(Complex &);//copy cons
         void Print();
-        ~Complex();//destructor
         Complex operator+(Complex);
         Complex & operator-(Complex&);
         Complex & operator+(int);
         Complex & operator-(int);
         Complex & operator++();//pre-inc
         Complex & operator++(int);//post-inc
+        ~Complex();//destructor
 };
 
 #endif
