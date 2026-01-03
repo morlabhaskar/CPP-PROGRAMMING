@@ -6,8 +6,7 @@ using namespace std;
 
 int main(){
 	Complex e1(10,20),e2(56,78),e3,e4;
-	e3=e1+8;//Complex &ref = e1.operator+(8);
-            //e3 = ref;   // copy assignment
+	e3=e1+8;//e3 = e1.operator+(8);
 	e4 = e1-3; //e4 = e1.operator-(3)
 	cout<<"e1:";
 	e1.Print();
