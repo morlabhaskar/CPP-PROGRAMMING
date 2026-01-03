@@ -8,7 +8,7 @@ class Student{
             cout<<"Enter the Student Name :"<<endl;
             cin>>name;
         }
-        SPrint(){
+        void SPrint(){
             cout<<"Student Id : "<<id<<endl;
             cout<<"Student Name : "<<name<<endl;
         }

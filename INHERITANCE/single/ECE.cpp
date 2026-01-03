@@ -12,7 +12,7 @@ class ECE : virtual public Student{
                 cin>>marks[i];
             }
         }
-        EPrint(){
+        void EPrint(){
             for(int i=0;i<6;i++){
                 cout<<marks[i]<<" ";
             }
@@ -33,7 +33,7 @@ class EEE : virtual public Student{
                 cin>>marks1[i];
             }
         }
-        EEPrint(){
+        void EEPrint(){
             for(int i=0;i<6;i++){
                 cout<<marks1[i]<<" ";
             }

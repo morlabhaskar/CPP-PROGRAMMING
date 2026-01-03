@@ -13,7 +13,7 @@ class Result : public ECE,public EEE{
                 totMarks += marks1[i];
             }
         }
-        CalPer(){
+        void CalPer(){
             per = totMarks/12;
         }
         void RPrint(){
