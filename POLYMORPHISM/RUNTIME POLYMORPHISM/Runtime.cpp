@@ -22,7 +22,7 @@ class Parent{
 		}
 };
 
-class Child : public  Parent{
+class Child : public Parent{
 	public : 
 		Child(){
 			cout<<"Child Constructor:"<<endl;

@@ -12,7 +12,7 @@ class Parent{
         }
 };
 class Child : public Parent{
-    int data2;;
+    int data2;
     public:
         Child(){
             cout<<"Child Constructor"<<endl;
