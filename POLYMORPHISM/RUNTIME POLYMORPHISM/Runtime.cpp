@@ -5,7 +5,7 @@ class Parent{
 	protected :
         int age;
 	    char name[20];
-	public :  
+	public : 
         Parent(){
 			cout<<"Parent Constructor:"<<endl;
 			cout<<"enter the age:"<<endl;
