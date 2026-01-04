@@ -24,16 +24,22 @@ int main(){
 Parameteraised Constructor :
 Parameteraised Constructor :
 Parameteraised Constructor :
+Parameteraised Constructor :
 Copy Constructor :
 Parameteraised Constructor :
-Destructor
-Destructor
+Destructor 
+Destructor 
+Parameteraised Constructor :
 e1 :
 10+20j
 e2 :
 30+40j
 e3 :
 40+60j
+e4 :
+20+20j
+Destructor
+Destructor
 Destructor
 Destructor
 Destructor
@@ -43,6 +49,7 @@ Output                          	Reason
 Parameteraised Constructor	        e1
 Parameteraised Constructor	        e2
 Parameteraised Constructor	        e3
+Parameteraised Constructor	        e4
 Copy Constructor	                argument passed by value
 Parameteraised Constructor	        local temp
 Destructor	                        parameter copy
@@ -50,7 +57,10 @@ Destructor	                        temp
 e1 :	                            print
 e2 :	                            print
 e3 :	                            print
+e4 :	                            print
+Destructor	                        e4
 Destructor	                        e3
 Destructor	                        e2
 Destructor	                        e1
+Destructor	                        static temp
 */
