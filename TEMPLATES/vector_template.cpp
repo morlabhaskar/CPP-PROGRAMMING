@@ -2,7 +2,7 @@
 using namespace std;
 
 template <class T>
-class vector {
+class vector{
     T *v;
     int size;
     public:
