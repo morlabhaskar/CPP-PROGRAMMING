@@ -1,4 +1,4 @@
-class ECE : virtual public Student{
+class ECE : public Student{
     protected : 
         float marks[6];
     public : 

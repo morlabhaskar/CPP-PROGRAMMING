@@ -392,7 +392,7 @@ using namespace std;
 //     XYZ::Display();
 // }//10\n  XYZ Display:
 
-
+int main(){int x=10,y=20;int &ref=x;cout<<ref<<" "<<x<<" ";ref=y;cout<<ref<<" "<<x<<endl;}
 /*
 Inheritance definition
 
