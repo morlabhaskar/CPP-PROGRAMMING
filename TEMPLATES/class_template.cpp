@@ -16,6 +16,7 @@ T myPair<T>::getmax(){
     return val;
 }
 int main(){
-    myPair<int> obj(10,20);
+    // myPair<int> obj(10,20);
+    myPair<char> obj('S','a');
     cout<<obj.getmax()<<endl;
 }

@@ -7,7 +7,7 @@ class vector{
     int size;
     public:
         // Constructor
-        vector(int vector_size) {
+        vector(int vector_size){
             size = vector_size;
             v = new T[vector_size];
         }

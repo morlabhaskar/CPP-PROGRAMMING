@@ -10,7 +10,9 @@ class Product{
     public:
         Product(){}
         void productInput(){
-            productId = (rand()%(9999-1111+1))+1111;
+            // productId = (rand()%(9999-1111+1))+1111;
+            cout<<"Enter the Product Id :"<<endl;
+            cin>>productId;
             cout<<"Enter the Product Name :"<<endl;
             cin>>productName;
             cout<<"Enter the Product Price :"<<endl;
@@ -30,7 +32,9 @@ class Customer{
     public:
         Customer(){}
         void custInput(){
-            custId = (rand()%(9999-1111+1))+1111;
+            // custId = (rand()%(9999-1111+1))+1111;
+            cout<<"Enter the Customer Id :"<<endl;
+            cin>>custId;
             cout<<"Enter the Customer Name :"<<endl;
             cin>>custName;
             cout<<"Enter the Customer Address :"<<endl;
@@ -60,14 +64,16 @@ class Order : public Product,public Customer{
             cout<<"Customer Name : "<<custName<<endl;
             cout<<"Customer Id : "<<custId<<endl;
             cout<<"Product Address : "<<custAddr<<endl;
+            cout<<"Order Price : "<<total<<endl;
         }
 };
 int main(){
-    srand(time(0));
+    // srand(time(0));
     Order obj;
     obj.productInput();
     obj.custInput();
     obj.orderInput();
+    obj.calTotal();
     cout<<"Product Details :"<<endl;
     obj.productPrint();
     cout<<"Customer Details : "<<endl;
