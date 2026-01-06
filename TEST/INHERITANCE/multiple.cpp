@@ -63,7 +63,7 @@ class Order : public Product,public Customer{
             cout<<"Product Price : "<<price<<endl;
             cout<<"Customer Name : "<<custName<<endl;
             cout<<"Customer Id : "<<custId<<endl;
-            cout<<"Product Address : "<<custAddr<<endl;
+            cout<<"Customer Address : "<<custAddr<<endl;
             cout<<"Order Price : "<<total<<endl;
         }
 };
