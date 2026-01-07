@@ -10,23 +10,26 @@ class Loan{
         float total;
     public:
         Loan(){
+            interest=0;
+            total=0;
             cout<<"Enter the Principal Amount : "<<endl;
             cin>>principalAmount;
-            cout<<"Enter the Loan Term: "<<endl;
+            cout<<"Enter the Loan Term (years) : "<<endl;
             cin>>loanTerm;
             cout<<"Enter the Borrow Name : "<<endl;
             cin>>borrowName;
-            cout<<"Enter the Loan Start Date : "<<endl;
+            cout<<"Enter the Loan Start Date (DD/MM/YYYY): "<<endl;
             cin>>loanStartDate;
         }
-        virtual void calculateTotalPayment(){}
+        virtual void calculateTotalPayment()=0;
         virtual void display(){
-            cout<<"Principal Amount : "<<principalAmount<<endl;
-            cout<<"Loan Term: "<<loanTerm<<endl;
-            cout<<"Borrow Name : "<<borrowName<<endl;
-            cout<<"Loan Start Date : "<<loanStartDate<<endl;
-            cout<<"Interest : "<<interest<<endl;
-            cout<<"Total : "<<total<<endl;
+            cout << "\n----- Loan Details -----\n";
+            cout << "Principal Amount : " << principalAmount << endl;
+            cout << "Loan Term        : " << loanTerm << " years" << endl;
+            cout << "Borrower Name    : " << borrowName << endl;
+            cout << "Loan Start Date  : " << loanStartDate << endl;
+            cout << "Interest         : " << interest << endl;
+            cout << "Total Payable    : " << total << endl;
         }
         virtual ~Loan(){
             cout<<"Loan Destructor"<<endl;
@@ -40,20 +43,22 @@ class HomeLoan : public Loan{
         HomeLoan(){
             cout<<"Enter the Property Address : "<<endl;
             cin>>propertyAddr;
-            cout<<"Enter the Interest Rate : "<<endl;
+            cout<<"Enter the Interest Rate (%) : "<<endl;
             cin>>interestRate;
-            cout<<"Enter the Insurance Included : "<<endl;
+            cout<<"Insurance Included (1-Yes, 0-No): "<<endl;
             cin>>insuranceIncluded;
         }
         void calculateTotalPayment(){
             interest=principalAmount*interestRate*loanTerm;
             total=principalAmount+interest;
-            total += insuranceIncluded ? 500 : 0;
+            if(insuranceIncluded)
+                total += 500;
         }
         void display(){
-            cout<<"Property Address : "<<propertyAddr<<endl;
-            cout<<"Interest Rate : "<<interestRate<<endl;
-            cout<<"Enter the Insurance Included : "<<insuranceIncluded<<endl;
+            Loan::display();
+            cout << "Property Address : " << propertyAddr << endl;
+            cout << "Interest Rate    : " << interestRate << "%" << endl;
+            cout << "Insurance Added  : " << (insuranceIncluded ? "Yes" : "No") << endl;
         }
         ~HomeLoan(){
             cout<<"Home Loan Destructor"<<endl;
@@ -69,7 +74,7 @@ class CarLoan : public Loan{
             cin>>carModel;
             cout<<"Enter the Dealer Name : "<<endl;
             cin>>dealerName;
-            cout<<"Enter the Interest Rate : "<<endl;
+            cout<<"Enter the Interest Rate (%) : "<<endl;
             cin>>interestRate;
         }
         void calculateTotalPayment(){
@@ -77,9 +82,10 @@ class CarLoan : public Loan{
             total=principalAmount+interest;
         }
         void display(){
-            cout<<"Car Model : "<<carModel<<endl;
-            cout<<"Dealer Name : "<<dealerName<<endl;
-            cout<<"Interest Rate : "<<interestRate<<endl;
+            Loan::display();
+            cout << "Car Model    : " << carModel << endl;
+            cout << "Dealer Name  : " << dealerName << endl;
+            cout << "Interest Rate: " << interestRate << "%" << endl;
         }
         ~CarLoan(){
             cout<<"Car Loan Destructor"<<endl;
@@ -91,9 +97,9 @@ class PersonalLoan : public Loan{
     float processFee;
     public:
         PersonalLoan(){
-            cout<<"Enter the Purpose : eg:\"Medical\",\"Travel\""<<endl;
+            cout<<"Enter Purpose (Medical/Travel/etc): "<<endl;
             cin>>purpose;
-            cout<<"Enter the Interest Rate : "<<endl;
+            cout<<"Enter the Interest Rate (%) : "<<endl;
             cin>>interestRate;
             cout<<"Enter the Process Fee : "<<endl;
             cin>>processFee;
@@ -103,9 +109,10 @@ class PersonalLoan : public Loan{
             total=principalAmount+interest+processFee;
         }
         void display(){
-            cout<<"Purpose : "<<purpose<<endl;
-            cout<<"Interest Rate : "<<interestRate<<endl;
-            cout<<"Process Fee : "<<processFee<<endl;
+            Loan::display();
+            cout << "Purpose         : " << purpose << endl;
+            cout << "Interest Rate   : " << interestRate << "%" << endl;
+            cout << "Processing Fee  : " << processFee << endl;
         }
         ~PersonalLoan(){
             cout<<"Personal Loan Destructor"<<endl;
