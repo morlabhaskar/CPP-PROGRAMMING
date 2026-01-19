@@ -13,6 +13,7 @@ class Transport{
             getline(cin,transportId);
         }
         virtual double calculateFare()=0;
+        // virtual double calculateFare(){};
         virtual void display(){
             cout<<"Transport Name : "<<transportName<<endl;
             cout<<"Transport Id   : "<<transportId<<endl;
