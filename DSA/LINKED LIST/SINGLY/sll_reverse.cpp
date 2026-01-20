@@ -7,31 +7,35 @@ struct Node{
 void insertEnd(struct Node* &head,int data){
     struct Node* newNode=new Node();
     newNode->val=data;
-    if(!head){
+    newNode->next=nullptr;
+    if(head==nullptr){
         head=newNode;
-        newNode->next=newNode;
         return;
     }
     struct Node* temp=head;
-    while(temp->next != head){
+    while(temp->next){
         temp=temp->next;
     }
     temp->next=newNode;
-    newNode->next=head;
 }
-void findLength(struct Node* &head){
-    int len=0;
-    if(head==NULL){
-        cout<<"Length : "<<len<<endl;
-        return;
+Node* reverse(struct Node* head){
+    if(!head){
+        cout<<"List is Empty"<<endl;
+        return head;
     }
-    len=1;
-    struct Node* temp=head->next;
-    while(temp!=head){
-        len++;
-        temp=temp->next;
+    else if(!head->next){
+        cout<<"Only one Node is Present"<<endl;
+        return head;
     }
-    cout<<"Length : "<<len<<endl;
+    struct Node* prev=nullptr,*cur=head,*next=nullptr;
+    while(cur){
+        next=cur->next;
+        cur->next=prev;
+        prev=cur;
+        cur=next;
+    }
+    cout<<"Reverse Successfully"<<endl;
+    return prev;
 }
 void displayNodes(struct Node* &head){
     if(!head){
@@ -39,18 +43,18 @@ void displayNodes(struct Node* &head){
         return;
     }
     struct Node* temp=head;
-    cout<<"Circular Singly Linked List is :"<<endl;
-    do{
-        cout<<temp->val<<"->";
+    cout<<"Singly Linked List is :"<<endl;
+    while(temp){
+        cout<<temp->val<<" ";
         temp=temp->next;
-    }while(temp != head);
-    cout<<head->val<<endl;
+    }
+    cout<<endl;
 }
 int main(){
-    struct Node* head=NULL;
+    struct Node* head=nullptr;
     char ch;
     while(1){
-        cout<<"i:insert  d:display  q:quit"<<endl;
+        cout<<"i:insert  d:display r:reverse  q:quit"<<endl;
         cout<<"Enter the Choice :"<<endl;
         cin>>ch;
         switch(ch){
@@ -63,8 +67,8 @@ int main(){
             case 'd':
                 displayNodes(head);
                 break;
-            case 'f':
-                findLength(head);
+            case 'r':
+                head=reverse(head);
                 break;
             case 'q':
                 cout<<"Thank You"<<endl;
