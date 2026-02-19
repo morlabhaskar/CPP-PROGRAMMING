@@ -20,9 +20,11 @@ void Reverse(int *p,int s){
     // }
     int *left=p,*right=p+(s-1);
     while(left<right){
-        int temp=*left;
-        *left=*right;
-        *right=temp;
+        if(*left != *right){
+            int temp=*left;
+            *left=*right;
+            *right=temp;
+        }
         left++;
         right--;
     }
