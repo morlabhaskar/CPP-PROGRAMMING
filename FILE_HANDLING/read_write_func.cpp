@@ -3,7 +3,7 @@
 #include<cstring>
 using namespace std;
 char *readFromFile(char *filename){
-    ifstream src(filename);
+    ifstream src(filename);//src.open(filename)
     if(!src){
         cout<<"File is Not Open"<<endl;
         exit(1);
