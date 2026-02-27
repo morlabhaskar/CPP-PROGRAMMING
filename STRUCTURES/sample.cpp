@@ -6,7 +6,7 @@ struct Bank{
 	int accno;
 	char name[20];
 	float bal;
-	public :
+	// public ://not mandotary
         void Deposit(float amt){
 		    bal+=amt;
 	    }

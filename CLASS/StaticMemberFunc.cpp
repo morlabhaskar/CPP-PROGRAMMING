@@ -4,10 +4,9 @@ using namespace std;
 class ABC{
     int data1, data2;
     static int cnt;
-
     public:
         ABC(int a = 0, int b = 0){
-            cout << "Constructor:"<< endl;
+            cout << "Default & Parameterised Constructor:"<< endl;
             data1 = a;
             data2 = b;
             cnt++;
@@ -29,7 +28,7 @@ class ABC{
             // error
         }
 };
-int ABC ::cnt; // defining the static data member outside the class (in  datasegment)
+int ABC ::cnt; // defining the static data member outside the class (in  data segment)
 
 int main(){
     ABC ::TotalObjs();
