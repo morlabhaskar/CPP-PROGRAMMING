@@ -9,7 +9,7 @@ class ABC{
             cout << "Default & Parameterised Constructor:"<< endl;
             data1 = a;
             data2 = b;
-            cnt++;
+            cnt++;   
         }
         ABC(ABC &obj){
             cout << "Copy cons:" << endl;
