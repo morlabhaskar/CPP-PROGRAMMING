@@ -10,10 +10,21 @@ NODE *createNode(int data){
     newNode->link=nullptr;
     return newNode;
 }
-void insertBeg(NODE* &ptr,int data){
-    NODE *newNode = createNode(data);
-    newNode->link=ptr;
-    ptr=newNode;
+void insertEnd(NODE* &ptr,int data){
+    NODE *newNode=createNode(data);
+    if(ptr==nullptr){
+        ptr=newNode;
+        return;
+    }else if(ptr->link==nullptr){
+        ptr->link=newNode;
+        return;
+    }
+    NODE* temp=ptr;
+    while(temp->link!=nullptr){
+        temp=temp->link;
+    }
+    temp->link=newNode;
+
 }
 void display(NODE *ptr){
     if(ptr==nullptr){
@@ -47,7 +58,7 @@ int main(){
                 int data;
                 cout<<"Enter the Data to Insert :"<<endl;
                 cin>>data;
-                insertBeg(head,data);
+                insertEnd(head,data);
                 break;
             case 'p':
                 display(head);

@@ -1,24 +1,24 @@
 #include<iostream>
 using namespace std;
-struct Node{
+typedef struct Node{
     int val;
     struct Node* next;
-};
-void insertEnd(struct Node* &head,int data){
-    struct Node* newNode=new Node();
+}NODE;
+void insertEnd(NODE* &head,int data){
+    NODE* newNode=new NODE;
     newNode->val=data;
     newNode->next=nullptr;
     if(head==nullptr){
         head=newNode;
         return;
     }
-    struct Node* temp=head;
+    NODE* temp=head;
     while(temp->next){
         temp=temp->next;
     }
     temp->next=newNode;
 }
-Node* reverse(struct Node* head){
+Node* reverse(NODE* head){
     if(!head){
         cout<<"List is Empty"<<endl;
         return head;
@@ -27,7 +27,7 @@ Node* reverse(struct Node* head){
         cout<<"Only one Node is Present"<<endl;
         return head;
     }
-    struct Node* prev=nullptr,*cur=head,*next=nullptr;
+    NODE* prev=nullptr,*cur=head,*next=nullptr;
     while(cur){
         next=cur->next;
         cur->next=prev;
@@ -37,12 +37,12 @@ Node* reverse(struct Node* head){
     cout<<"Reverse Successfully"<<endl;
     return prev;
 }
-void displayNodes(struct Node* &head){
+void displayNodes(NODE* &head){
     if(!head){
         cout<<"List is Empty"<<endl;
         return;
     }
-    struct Node* temp=head;
+    NODE* temp=head;
     cout<<"Singly Linked List is :"<<endl;
     while(temp){
         cout<<temp->val<<" ";
@@ -50,8 +50,17 @@ void displayNodes(struct Node* &head){
     }
     cout<<endl;
 }
+void freeup(NODE* &ptr){
+    NODE *del=nullptr;
+    while(ptr){
+        del=ptr;
+        ptr=ptr->next;
+        delete del;
+    }
+    cout<<"Memory Freed Successfully"<<endl;
+}
 int main(){
-    struct Node* head=nullptr;
+    NODE* head=nullptr;
     char ch;
     while(1){
         cout<<"i:insert  d:display r:reverse  q:quit"<<endl;
@@ -71,6 +80,7 @@ int main(){
                 head=reverse(head);
                 break;
             case 'q':
+                freeup(head);
                 cout<<"Thank You"<<endl;
                 return 0;
             default :
