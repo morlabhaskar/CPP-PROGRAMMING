@@ -31,7 +31,7 @@ class ABC{
 int ABC ::cnt; // defining the static data member outside the class (in  data segment)
 
 int main(){
-    ABC ::TotalObjs();
+    ABC ::TotalObjs();//static functions calls directly even not creating obj.
     ABC obj1;
     obj1.Print();
     ABC obj2(10, 20);

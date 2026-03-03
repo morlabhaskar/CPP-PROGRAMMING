@@ -4,6 +4,6 @@ class Matrix{
     public : 
         void Input();
         void Print();
-        Matrix Add(Matrix);
-        Matrix & Sub(Matrix &);
+        Matrix Add(Matrix &);
+        Matrix Sub(Matrix &);
 };

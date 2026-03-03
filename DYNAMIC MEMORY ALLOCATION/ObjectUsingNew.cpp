@@ -39,7 +39,7 @@ int main(){
     q->Print();
 
     ABC *r;
-    r = new ABC(*r);//copy cons
+    r = new ABC(*q);//copy cons
     r->Print();
 
     delete p;

@@ -16,7 +16,7 @@ void Matrix :: Print(){
     }
 }
 
-Matrix Matrix :: Add(Matrix e){
+Matrix Matrix :: Add(Matrix &e){
     Matrix temp;
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
@@ -26,11 +26,12 @@ Matrix Matrix :: Add(Matrix e){
     return temp;
 }
 
-Matrix & Matrix :: Sub(Matrix &e){
+Matrix Matrix :: Sub(Matrix &e){
     Matrix temp;
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
-            temp.arr[i][j] = arr[i][j] + e.arr[i][j];
+            temp.arr[i][j] = arr[i][j] - e.arr[i][j];
         }
     }
+    return temp;
 }

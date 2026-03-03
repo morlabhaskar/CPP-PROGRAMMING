@@ -10,7 +10,7 @@ class Stack{
         }
         void Push(int data){
             if(top == MAX-1)
-                cout<<"Stack is Empty!"<<endl;
+                cout<<"Stack is Full"<<endl;
             else{
                 arr[++top] = data;
             }

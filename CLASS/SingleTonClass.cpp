@@ -27,7 +27,7 @@ class Singleton{
         }
 };
 bool Singleton :: flag=false;
-Singleton * Singleton :: ptr=NULL;
+Singleton* Singleton :: ptr=NULL;
 int main(){
     Singleton *p1,*p2;
     p1=Singleton::CreateInstance();

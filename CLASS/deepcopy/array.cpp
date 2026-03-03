@@ -32,8 +32,8 @@ void Array :: Print(){
 }
 void Array :: Sort(){
 	int i,j,t;
-	for(i=1;i<size;i++){
-		for(j=0;j<size-i;j++){	
+	for(i=0;i<size-1;i++){
+		for(j=0;j<size-i-1;j++){	
             if(ptr[j]>ptr[j+1]){
 				t=ptr[j];
 				ptr[j]=ptr[j+1];

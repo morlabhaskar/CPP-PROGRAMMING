@@ -9,7 +9,7 @@ int main(){
     dest.open("dest.txt");//open in write mode
     while(!src.eof()){
         src>>str;
-        dest<<str;
+        dest<<str<<endl;
     }
     src.close();
     dest.close();

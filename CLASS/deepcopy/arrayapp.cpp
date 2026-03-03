@@ -9,9 +9,10 @@ int main(){
 	Array obj2=obj1;
 	cout<<"obj2:"<<endl;
 	obj2.Print();
+	cout<<"Reverse obj2 :"<<endl;
 	obj2.Reverse();
-	cout<<"obj2:"<<endl;
 	obj2.Print();
-	cout<<"obj1"<<endl;
+	cout<<"sort obj1:"<<endl;
+	obj1.Sort();
 	obj1.Print();
 }

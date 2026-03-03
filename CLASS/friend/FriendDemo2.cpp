@@ -18,14 +18,14 @@ void twocompliment(XYZ &O){
 	cout<<-O.data1<<endl; // cout<<~(O.data1)+1<<endl;
 	cout<<-O.data2<<endl; // cout<<~(O.data2)+1<<endl;
 }
-void foo(XYZ &O){
-	++O.data1;
-}
+// void foo(XYZ &O){//error because foo() is not an frient of XYZ class
+// 	++O.data1;
+// }
 int main(){
 	XYZ obj;
 	obj.Print();
 	twocompliment(obj);
-	foo(obj);
+	// foo(obj);
 	obj.Print();
 }
 
