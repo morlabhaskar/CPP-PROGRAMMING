@@ -19,6 +19,7 @@ class Calculator{
             }
             return a/b;
         }
+
 };
 
 int main(){

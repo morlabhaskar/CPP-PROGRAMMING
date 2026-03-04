@@ -16,7 +16,7 @@ class B : public A {
 };
 int main() {
     B obj;
-    // obj.x = 10;  // error
+    // obj.x = 10;  // error because x is private in B
     obj.set();
     obj.show();
 }

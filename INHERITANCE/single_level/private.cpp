@@ -12,7 +12,7 @@ class A{
             cout << "x = " << x << endl;
         }
 };
-int main() {
+int main(){
     A obj;
     // obj.x = 10;   // error
     obj.set(10);    // allowed

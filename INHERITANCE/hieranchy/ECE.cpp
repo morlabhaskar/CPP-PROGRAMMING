@@ -3,7 +3,8 @@ Virtual inheritance prevents multiple copies of a base class and resolves ambigu
 */
 
 class ECE : virtual public Student{
-    protected : float marks[6];
+    protected : 
+        float marks[6];
     public : 
         ECE(){
             cout<<"ECE Constructor"<<endl;
@@ -24,7 +25,8 @@ class ECE : virtual public Student{
 };
 
 class EEE : virtual public Student{
-    protected : float marks1[6];
+    protected : 
+        float marks1[6];
     public : 
         EEE(){
             cout<<"EEE Constructor"<<endl;

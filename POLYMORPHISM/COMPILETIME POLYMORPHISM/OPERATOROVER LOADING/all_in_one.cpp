@@ -100,24 +100,26 @@ class Matrix{
         friend Matrix & operator++(Matrix&,int);
         friend Matrix & operator--(Matrix&);
         friend Matrix & operator--(Matrix&,int);
-        friend void operator>>(istream &,Matrix &);
-        friend void operator<<(ostream &,Matrix &);
+        friend istream & operator>>(istream &,Matrix &);
+        friend ostream & operator<<(ostream &,Matrix &);
 
 };
-void operator>>(istream &in,Matrix &a){
+istream & operator>>(istream &in,Matrix &a){
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
             in>>a.arr[i][j];
         }
     }
+    return in;
 }
-void operator<<(ostream &out,Matrix &a){
+ostream & operator<<(ostream &out,Matrix &a){
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
             out<<a.arr[i][j]<<" ";
         }
         out<<endl;
     }
+    return out;
 }
 Matrix operator+(Matrix a,Matrix b){
     Matrix temp;
