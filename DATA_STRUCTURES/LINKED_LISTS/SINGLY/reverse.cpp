@@ -18,7 +18,7 @@ void insertEnd(NODE* &head,int data){
     }
     temp->next=newNode;
 }
-Node* reverse(NODE* head){
+NODE* reverse(NODE* head){
     if(!head){
         cout<<"List is Empty"<<endl;
         return head;
