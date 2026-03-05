@@ -13,7 +13,7 @@ class Parent{
 			cout<<"enter the name:"<<endl;
 			cin>>name;
 		}
-		virtual  void Print(){
+		virtual void Print(){
 			cout<<"age:"<<age<<endl;
 			cout<<"name:"<<name<<endl;
 		}
