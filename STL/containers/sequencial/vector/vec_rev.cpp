@@ -1,6 +1,16 @@
 #include<iostream>
 #include<vector>
 using namespace std;
+void reverse(vector<int>& v){
+    int first=0,last=v.size()-1;
+    while(first<last){
+        if(v[first]!=v[last]){
+            v[first] ^= v[last] ^= v[first] ^= v[last];
+        }
+        first++;
+        last--;
+    }
+}
 int main(){
     vector<int> v;
     int n,x;
@@ -15,5 +25,10 @@ int main(){
         cout<<i<<" ";
     }
     cout<<endl;
-    
+    reverse(v);
+    cout<<"Array After Reverse :"<<endl;
+    for(int i : v){
+        cout<<i<<" ";
+    }
+    cout<<endl;
 }
