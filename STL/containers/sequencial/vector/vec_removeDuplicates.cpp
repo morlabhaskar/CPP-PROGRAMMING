@@ -8,7 +8,7 @@ void print(vector<int>& v){
     cout<<endl;
 }
 void remove_duplicates(vector<int>& v){
-    for(int i=0)
+    
 }
 int main(){
     vector<int> v;
