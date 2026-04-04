@@ -1,0 +1,3 @@
+Smart pointers in C++ are objects that manage dynamic memory automatically, 
+helping you avoid common issues like memory leaks, dangling pointers, and double deletion.
+defined in the <memory> header.
