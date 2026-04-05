@@ -9,6 +9,12 @@ int main(){
     cout<<q.front()<<endl;
     q.pop();
     cout<<q.front()<<endl;
+    cout<<q.empty()<<endl;
+    cout<<"All Elements : "<<endl;
+    while(!q.empty()){
+        cout<<q.front()<<" ";
+        q.pop();
+    }
 }
 /*
 Follows FIFO principle
