@@ -13,3 +13,9 @@ int main(){
         std::cout<<*p<<std::endl;//10
     }
 }
+/*
+int
+char
+int
+char
+*/
