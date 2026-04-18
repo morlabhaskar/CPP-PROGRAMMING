@@ -13,5 +13,14 @@ int main(){
     // int disp = temp;  //Conversion is done automatically by the compiler
     // int disp = (int)temp; //Old-style casting (from C)
     int disp = static_cast<int>(temp);//C++ Style Casting Modern, recommended approach
-    std::cout<<disp;
+    std::cout<<disp<<std::endl;
+
+    int a = 5, b = 2;
+    // Wrong result
+    double result1 = a / b;   // Output: 2
+    std::cout<<result1<<std::endl;
+
+    // Correct result
+    double result2 = static_cast<double>(a) / b;  // Output: 2.5
+    std::cout<<result2<<std::endl;
 }
