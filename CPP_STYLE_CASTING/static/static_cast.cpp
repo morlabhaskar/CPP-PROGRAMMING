@@ -4,6 +4,11 @@ SYX : static_cast<new_type>(expression)
 1. Basic data type conversion
 2. Upcasting (Derived → Base)
 3. Downcasting (only if you're 100% sure)
+Checked at compile time
+
+When you need runtime safety → use dynamic_cast
+For unrelated pointer conversions → use reinterpret_cast
+To remove const → use const_cast
 
 */
 #include<iostream>
