@@ -35,4 +35,17 @@ int main() {
     } else {
         std::cout << "Not a Car\n";
     }
+
+    //if object is wrong?
+    Vehicle* x = new Bike();
+    Car* y = dynamic_cast<Car*>(x);
+    if (y == nullptr) {
+        std::cout << "Cast failed safely\n";
+    }
 }
+/*
+OP:
+Trunk opened
+Cast failed safely
+*/
+
