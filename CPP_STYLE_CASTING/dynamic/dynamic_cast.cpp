@@ -7,6 +7,16 @@ The base class must be polymorphic
 (i.e., it must have at least one virtual function)
 Because static_cast can be dangerous in downcasting.
 dynamic_cast prevents invalid conversions and crashes
+
+When NOT to use dynamic_cast ?
+ If you don’t have polymorphism
+ If performance is critical (tight loops)
+ If design can avoid downcasting (better use virtual functions)
+
+ dynamic_cast is like:
+👉 Checking ID before entering a building
+If valid → allowed
+If not → rejected safely
 */
 #include <iostream>
 
