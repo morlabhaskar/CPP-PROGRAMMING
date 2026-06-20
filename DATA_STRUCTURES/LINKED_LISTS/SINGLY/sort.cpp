@@ -45,20 +45,20 @@ void bubble_sort(NODE* &head){
         return;
     }
     int swapped;
-    NODE* ptr1=NULL,*lptr=NULL;
+    NODE* ptr=NULL,*lptr=NULL;
     do{
         swapped=0;
-        ptr1=head;
-        while(ptr1->link!=lptr){
-            if(ptr1->data > ptr1->link->data){
+        ptr=head;
+        while(ptr->link!=lptr){
+            if(ptr->data > ptr->link->data){
                 swapped=1;
-                int num=ptr1->data;
-                ptr1->data=ptr1->link->data;
-                ptr1->link->data=num;
+                int num=ptr->data;
+                ptr->data=ptr->link->data;
+                ptr->link->data=num;
             }
-            ptr1=ptr1->link;
+            ptr=ptr->link;
         }
-        lptr=ptr1;
+        lptr=ptr;
     }while(swapped);
     cout<<"Sorting Successfully"<<endl;
 }

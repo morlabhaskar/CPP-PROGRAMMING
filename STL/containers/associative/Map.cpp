@@ -7,7 +7,7 @@ int main(){
     m[5] = "Ravi";
     m[10] = "Bhaskar";//not allowed becouse key value is unique
     m[30] = "Bhaskar";
-    for(auto p : m){
+    for(auto &p : m){
         cout << p.first << " " << p.second<<endl;
     }
 }
