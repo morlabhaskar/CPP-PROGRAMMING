@@ -14,7 +14,7 @@ namespace XYZ{
         cout<<~data1+1<<endl;
     }
 }
-using namespace ABC;
+// using namespace ABC;
 int main(){
     cout<<data1<<endl;
     cout<<ABC::data1<<endl;
