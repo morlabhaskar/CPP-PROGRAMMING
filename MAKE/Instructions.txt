@@ -62,3 +62,15 @@ MinGW Makefiles
   MyApp.exe
       ↓
    Output: 30
+
+-------------------------------------------------------------
+|                        EXECUTION                           |
+-------------------------------------------------------------
+
+& "C:\Program Files\CMake\bin\cmake.exe" .. -G "MinGW Makefiles"    -> Initial one time only
+
+& "C:\Program Files\CMake\bin\cmake.exe" --build .   -> After changes
+
+ ./MyApp.exe  
+
+ -----------------------------------------------------------------------------
