@@ -1,0 +1,3 @@
+C:/Users/morla/OneDrive/Desktop/CPP/MAKE/build/CMakeFiles/MyApp.dir
+C:/Users/morla/OneDrive/Desktop/CPP/MAKE/build/CMakeFiles/edit_cache.dir
+C:/Users/morla/OneDrive/Desktop/CPP/MAKE/build/CMakeFiles/rebuild_cache.dir
