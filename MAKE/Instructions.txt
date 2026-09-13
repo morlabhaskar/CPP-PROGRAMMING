@@ -1,0 +1,64 @@
+First install cmake
+---------------------------------------------
+
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE> mkdir build                                                     
+
+    Directory: C:\Users\morla\OneDrive\Desktop\CPP\MAKE
+
+Mode                 LastWriteTime         Length Name                                                                  
+----                 -------------         ------ ----                                                                  
+d-----        13-09-2026     17:00                build                                                                 
+
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE> cd build
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE\build> & "C:\Program Files\CMake\bin\cmake.exe" .. -G "MinGW Makefiles"
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/MinGW/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/MinGW/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (8.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/morla/OneDrive/Desktop/CPP/MAKE/build
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE\build> & "C:\Program Files\CMake\bin\cmake.exe" --build .              
+[ 33%] Building CXX object CMakeFiles/MyApp.dir/main.cpp.obj
+[ 66%] Building CXX object CMakeFiles/MyApp.dir/math.cpp.obj
+[100%] Linking CXX executable MyApp.exe
+[100%] Built target MyApp
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE\build> ls
+
+
+    Directory: C:\Users\morla\OneDrive\Desktop\CPP\MAKE\build
+
+
+Mode                 LastWriteTime         Length Name                                                                  
+----                 -------------         ------ ----                                                                  
+d-----        13-09-2026     17:01                CMakeFiles                                                            
+-a----        13-09-2026     17:00          17093 CMakeCache.txt                                                        
+-a----        13-09-2026     17:00           2081 cmake_install.cmake                                                   
+-a----        13-09-2026     17:00           6067 Makefile                                                              
+-a----        13-09-2026     17:01          44984 MyApp.exe                                                             
+
+
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE\build> ./MyApp.exe
+Adding : 30
+PS C:\Users\morla\OneDrive\Desktop\CPP\MAKE\build> 
+
+-------------------------------------------------------------------
+CMakeLists.txt
+      ↓
+     CMake
+      ↓
+MinGW Makefiles
+      ↓
+     g++
+      ↓
+  MyApp.exe
+      ↓
+   Output: 30
